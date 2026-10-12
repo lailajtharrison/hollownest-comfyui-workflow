@@ -12,15 +12,16 @@ My backend builds each graph in Python and sends it to ComfyUI's API. It checks 
 
 | File | Nodes | What it does |
 |---|---|---|
+| `hollownest-trellis2-workflow.json` | 9 | **Start here.** The TRELLIS.2 graph as I laid it out in ComfyUI, grouped into Inputs, Generate, and Export and preview. |
 | `01_text_to_image_zimage_seed_sweep.json` | 8 | Z-Image Turbo turns the prompt into a product-style reference image. The site runs it at seeds 42 to 45 so the user gets four options. |
 | `02_image_to_3d_trellis2.json` | 8 | TRELLIS.2 turns the picked image into a 3D model with PBR textures. This is the branch that made the model above. |
 | `03_image_to_3d_hunyuan3d_fallback.json` | 23 | Hunyuan3D runs only if TRELLIS.2 isn't installed. It cleans the image, builds the mesh, removes baked lighting, and bakes the texture from six cameras I set up. |
 
 ![The TRELLIS.2 graph in ComfyUI](screenshot.png)
 
-This is the TRELLIS.2 graph on the ComfyUI canvas, with a cracked steel beam from a KSU engineering project as input. The settings match `02_image_to_3d_trellis2.json`. In this version the input image is already cut out, so the mask comes straight from its alpha channel. The site version adds the rembg nodes instead, because uploaded photos still have their backgrounds.
+This is `hollownest-trellis2-workflow.json` on the ComfyUI canvas, turning an anatomical heart into a textured 3D model. The settings match `02_image_to_3d_trellis2.json`. In this version the input image is already cut out, so the mask comes straight from its alpha channel. The site version adds the rembg nodes instead, because uploaded photos still have their backgrounds.
 
-**To inspect them:** drag any of the JSON files into ComfyUI. They're in API format, so ComfyUI will lay the nodes out automatically.
+**To inspect them:** drag `hollownest-trellis2-workflow.json` into ComfyUI to see the graph with my layout. The numbered files are the API versions my backend sends. They load too, but ComfyUI lays them out automatically.
 
 **Node packs needed:**
 
@@ -48,6 +49,8 @@ The figure at the top is real output from the live site.
 2. **Four seeds:** two lace-up shoes, an ankle bootie, and a pull-tab rain boot.
 3. **The pick:** seed 44, the rain boot.
 4. **The 3D model:** HollowNest job `3f100f63a2e0`, 188,518 faces, 2048 px PBR textures. I rendered it in Blender from three angles.
+
+The screenshot above shows a second example. An anatomical heart goes from a single image to a textured 3D model in the preview node.
 
 `seed_sweep.png` shows the same four-seed sweep for three prompts. The fire hydrant stays consistent across seeds. The shoe changes completely.
 

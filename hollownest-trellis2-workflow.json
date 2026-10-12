@@ -1,0 +1,825 @@
+{
+ "id": "993ef16b-b850-4a37-8e99-cdfe9b8651d3",
+ "revision": 0,
+ "last_node_id": 75,
+ "last_link_id": 148,
+ "nodes": [
+  {
+   "id": 10,
+   "type": "MaskPreview",
+   "pos": [
+    -130.00007169575258,
+    278.0000060083262
+   ],
+   "size": [
+    240,
+    306
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "mask",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "MASK",
+     "pos": null,
+     "link": 15
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.5.1",
+    "Node name for S&R": "MaskPreview"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 11,
+   "type": "InvertMask",
+   "pos": [
+    -130.00002851103073,
+    169.99998285765827
+   ],
+   "size": [
+    240,
+    48
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "mask",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "MASK",
+     "pos": null,
+     "link": 13
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "MASK",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "MASK",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      15,
+      130
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.5.1",
+    "Node name for S&R": "InvertMask"
+   },
+   "widgets_values": []
+  },
+  {
+   "id": 1,
+   "type": "LoadImage",
+   "pos": [
+    -550.0000369702647,
+    169.99998285765827
+   ],
+   "size": [
+    360,
+    564
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "IMAGE",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "IMAGE",
+     "pos": null,
+     "slot_index": 0,
+     "links": [
+      131
+     ]
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "MASK",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "MASK",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      13
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.5.0",
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "input_2d24052b_image-v1.png",
+    "image"
+   ]
+  },
+  {
+   "id": 64,
+   "type": "Preview3D",
+   "pos": [
+    1321.9998748811315,
+    218.00001713835616
+   ],
+   "size": [
+    672,
+    672
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "camera_info",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "LOAD3D_CAMERA",
+     "pos": null,
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "bg_image",
+     "nameLocked": null,
+     "removable": null,
+     "shape": 7,
+     "type": "IMAGE",
+     "pos": null,
+     "link": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "model_file",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING,FILE_3D_GLB,FILE_3D_GLTF,FILE_3D_FBX,FILE_3D_OBJ,FILE_3D_STL,FILE_3D_USDZ,FILE_3D",
+     "widget": {
+      "name": "model_file"
+     },
+     "link": 147
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.5.1",
+    "Node name for S&R": "Preview3D",
+    "Last Time Model File": "",
+    "Resource Folder": "",
+    "Scene Config": {
+     "showGrid": true,
+     "backgroundColor": "#282828",
+     "backgroundImage": "",
+     "backgroundRenderMode": "tiled"
+    },
+    "Light Config": {
+     "intensity": 3
+    }
+   },
+   "widgets_values": [
+    "",
+    ""
+   ]
+  },
+  {
+   "id": 73,
+   "type": "Trellis2ImageToShape",
+   "pos": [
+    349.9999688181732,
+    -45.99999866659476
+   ],
+   "size": [
+    384,
+    266.390625
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "model_config",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_MODEL_CONFIG",
+     "pos": null,
+     "link": 141
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "conditioning",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_CONDITIONING",
+     "pos": null,
+     "link": 140
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "shape_result",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_SHAPE_RESULT",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      144
+     ]
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "mesh",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRIMESH",
+     "pos": null,
+     "slot_index": null,
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-TRELLIS2",
+    "ver": "64864b18792132e2ba952f037f257bcf29a7ba05",
+    "Node name for S&R": "Trellis2ImageToShape",
+    "aux_id": "PozzettiAndrea/ComfyUI-TRELLIS2"
+   },
+   "widgets_values": [
+    42,
+    "fixed",
+    7.5,
+    12,
+    7.5,
+    12,
+    49152
+   ]
+  },
+  {
+   "id": 74,
+   "type": "Trellis2ExportGLB",
+   "pos": [
+    1321.9998748811315,
+    -45.99999866659476
+   ],
+   "size": [
+    360,
+    212
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "voxelgrid_path",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "widget": {
+      "name": "voxelgrid_path"
+     },
+     "link": 148
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "glb_path",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      147
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-TRELLIS2",
+    "ver": "96c6da180e6f54b6ef0091dd209b533a969f7ccd",
+    "Node name for S&R": "Trellis2ExportGLB",
+    "aux_id": "PozzettiAndrea/ComfyUI-TRELLIS2"
+   },
+   "widgets_values": [
+    "",
+    200000,
+    2048,
+    true,
+    "3D/Hollownest"
+   ]
+  },
+  {
+   "id": 75,
+   "type": "Trellis2ShapeToTexturedMesh",
+   "pos": [
+    793.9999728253952,
+    -45.99999866659476
+   ],
+   "size": [
+    408,
+    204
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "model_config",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_MODEL_CONFIG",
+     "pos": null,
+     "link": 146
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "conditioning",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_CONDITIONING",
+     "pos": null,
+     "link": 145
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "shape_result",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_SHAPE_RESULT",
+     "pos": null,
+     "link": 144
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "mesh_glb_path",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "pos": null,
+     "slot_index": null,
+     "links": null
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "voxelgrid_npz_path",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "STRING",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      148
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-TRELLIS2",
+    "ver": "96c6da180e6f54b6ef0091dd209b533a969f7ccd",
+    "Node name for S&R": "Trellis2ShapeToTexturedMesh",
+    "aux_id": "PozzettiAndrea/ComfyUI-TRELLIS2"
+   },
+   "widgets_values": [
+    42,
+    "fixed",
+    7.5,
+    12
+   ]
+  },
+  {
+   "id": 68,
+   "type": "LoadTrellis2Models",
+   "pos": [
+    -550.0000369702647,
+    -45.99999866659476
+   ],
+   "size": [
+    360,
+    151.96875
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "model_config",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_MODEL_CONFIG",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      129,
+      141,
+      146
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-TRELLIS2",
+    "ver": "aa154e8917f94c1d5a45536ecc63636dfdd1bf8b",
+    "Node name for S&R": "LoadTrellis2Models",
+    "aux_id": "PozzettiAndrea/ComfyUI-TRELLIS2"
+   },
+   "widgets_values": [
+    "1024_cascade",
+    "auto",
+    "auto"
+   ]
+  },
+  {
+   "id": 69,
+   "type": "Trellis2GetConditioning",
+   "pos": [
+    -130.00002851103073,
+    -45.99999866659476
+   ],
+   "size": [
+    360,
+    146.390625
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "showAdvanced": null,
+   "inputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "model_config",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_MODEL_CONFIG",
+     "pos": null,
+     "link": 129
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "image",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "IMAGE",
+     "pos": null,
+     "link": 131
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "mask",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "MASK",
+     "pos": null,
+     "link": 130
+    }
+   ],
+   "outputs": [
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "conditioning",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "TRELLIS2_CONDITIONING",
+     "pos": null,
+     "slot_index": null,
+     "links": [
+      140,
+      145
+     ]
+    },
+    {
+     "color_off": null,
+     "color_on": null,
+     "dir": null,
+     "label": null,
+     "locked": null,
+     "name": "preprocessed_image",
+     "nameLocked": null,
+     "removable": null,
+     "shape": null,
+     "type": "IMAGE",
+     "pos": null,
+     "slot_index": null,
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-TRELLIS2",
+    "ver": "aa154e8917f94c1d5a45536ecc63636dfdd1bf8b",
+    "Node name for S&R": "Trellis2GetConditioning",
+    "aux_id": "PozzettiAndrea/ComfyUI-TRELLIS2"
+   },
+   "widgets_values": [
+    "black"
+   ]
+  }
+ ],
+ "links": [
+  [
+   13,
+   1,
+   1,
+   11,
+   0,
+   "MASK"
+  ],
+  [
+   15,
+   11,
+   0,
+   10,
+   0,
+   "MASK"
+  ],
+  [
+   129,
+   68,
+   0,
+   69,
+   0,
+   "TRELLIS2_MODEL_CONFIG"
+  ],
+  [
+   130,
+   11,
+   0,
+   69,
+   2,
+   "MASK"
+  ],
+  [
+   131,
+   1,
+   0,
+   69,
+   1,
+   "IMAGE"
+  ],
+  [
+   140,
+   69,
+   0,
+   73,
+   1,
+   "TRELLIS2_CONDITIONING"
+  ],
+  [
+   141,
+   68,
+   0,
+   73,
+   0,
+   "TRELLIS2_MODEL_CONFIG"
+  ],
+  [
+   144,
+   73,
+   0,
+   75,
+   2,
+   "TRELLIS2_SHAPE_RESULT"
+  ],
+  [
+   145,
+   69,
+   0,
+   75,
+   1,
+   "TRELLIS2_CONDITIONING"
+  ],
+  [
+   146,
+   68,
+   0,
+   75,
+   0,
+   "TRELLIS2_MODEL_CONFIG"
+  ],
+  [
+   147,
+   74,
+   0,
+   64,
+   2,
+   "STRING"
+  ],
+  [
+   148,
+   75,
+   1,
+   74,
+   0,
+   "STRING"
+  ]
+ ],
+ "floatingLinks": null,
+ "groups": [
+  {
+   "id": 1,
+   "title": "Inputs",
+   "bounding": [
+    -586,
+    -166,
+    864,
+    948
+   ],
+   "color": "#3f789e",
+   "font_size": 28,
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "Generate (TRELLIS.2)",
+   "bounding": [
+    314,
+    -166,
+    936,
+    444
+   ],
+   "color": "#88A",
+   "font_size": 28,
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "Export & preview",
+   "bounding": [
+    1286,
+    -166,
+    744,
+    1092
+   ],
+   "color": "#b06634",
+   "font_size": 28,
+   "flags": {}
+  }
+ ],
+ "definitions": null,
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.6880733944954128,
+   "offset": [
+    673.2,
+    404.80000000000007
+   ]
+  },
+  "frontendVersion": "1.38.13",
+  "workflowRendererVersion": "Vue",
+  "reroutes": null
+ },
+ "version": 0.4
+}
