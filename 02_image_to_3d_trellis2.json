@@ -1,0 +1,106 @@
+{
+  "15": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "picked_seed.png"
+    }
+  },
+  "52": {
+    "class_type": "Trellis2GetConditioning",
+    "inputs": {
+      "model_config": [
+        "50",
+        0
+      ],
+      "image": [
+        "51b",
+        0
+      ],
+      "mask": [
+        "51b",
+        1
+      ],
+      "background_color": "black"
+    }
+  },
+  "50": {
+    "class_type": "LoadTrellis2Models",
+    "inputs": {
+      "resolution": "1024_cascade",
+      "precision": "auto",
+      "attn_backend": "auto"
+    }
+  },
+  "51a": {
+    "class_type": "RemBGSession+",
+    "inputs": {
+      "model": "u2net: general purpose",
+      "providers": "CUDA"
+    }
+  },
+  "51b": {
+    "class_type": "ImageRemoveBackground+",
+    "inputs": {
+      "image": [
+        "15",
+        0
+      ],
+      "rembg_session": [
+        "51a",
+        0
+      ]
+    }
+  },
+  "53": {
+    "class_type": "Trellis2ImageToShape",
+    "inputs": {
+      "model_config": [
+        "50",
+        0
+      ],
+      "conditioning": [
+        "52",
+        0
+      ],
+      "seed": 42,
+      "ss_guidance_strength": 7.5,
+      "ss_sampling_steps": 12,
+      "shape_guidance_strength": 7.5,
+      "shape_sampling_steps": 12,
+      "max_tokens": 49152
+    }
+  },
+  "54": {
+    "class_type": "Trellis2ShapeToTexturedMesh",
+    "inputs": {
+      "model_config": [
+        "50",
+        0
+      ],
+      "conditioning": [
+        "52",
+        0
+      ],
+      "shape_result": [
+        "53",
+        0
+      ],
+      "seed": 42,
+      "tex_guidance_strength": 7.5,
+      "tex_sampling_steps": 12
+    }
+  },
+  "55": {
+    "class_type": "Trellis2ExportGLB",
+    "inputs": {
+      "voxelgrid_path": [
+        "54",
+        1
+      ],
+      "decimation_target": 200000,
+      "texture_size": 2048,
+      "remesh": true,
+      "filename_prefix": "3D/hollownest_job"
+    }
+  }
+}
