@@ -24,9 +24,9 @@ This is the TRELLIS.2 graph on the ComfyUI canvas, with a cracked steel beam fro
 
 **Node packs needed:**
 
-- **ComfyUI_essentials** for background removal and resizing.
-- **ComfyUI-Hunyuan3DWrapper** for the fallback graph.
-- **A TRELLIS.2 node pack** for the main 3D graph. Its nodes are tagged TRELLIS2 in the screenshot.
+- **[ComfyUI-TRELLIS2](https://github.com/PozzettiAndrea/ComfyUI-TRELLIS2)** for the main 3D graph.
+- **[ComfyUI_essentials](https://github.com/cubiq/ComfyUI_essentials)** for background removal and resizing.
+- **[ComfyUI-Hunyuan3DWrapper](https://github.com/kijai/ComfyUI-Hunyuan3DWrapper)** for the fallback graph.
 
 **Key settings:**
 
